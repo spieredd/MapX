@@ -1,0 +1,25 @@
+{
+  "name": "MapX",
+  "version": "1.0.0",
+  "description": "MapX 📲 is the digital version of our class WWI map project.",
+  "main": "server.js",
+  "scripts": {
+    "devStart": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/science-math-guy/MapX.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/science-math-guy/MapX/issues"
+  },
+  "homepage": "https://github.com/science-math-guy/MapX#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
