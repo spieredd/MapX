@@ -10,7 +10,11 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    res.render('index')
+    res.render('index');
+});
+
+app.get('/map', (req, res) => {
+    res.render('map');
 });
 
 app.listen(PORT, () => {
