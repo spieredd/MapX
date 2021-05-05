@@ -1,14 +1,19 @@
-body{
-    display:flex;
+body {
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color:#e1baba;
+    background: rgb(19, 19, 19);
     font-family: 'Poppins', sans-serif;
     flex-direction: column;
-    width:100%;
-    height:100vh;
+    width: 100%;
+    height: 100vh;
 }
 
-h1{
-    font-size:4vw;
+h1 {
+    font-size: 4vw;
+    color:#dfdfdf;
+}
+
+button{
+    margin-bottom:20px;
 }
