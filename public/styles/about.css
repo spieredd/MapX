@@ -1,0 +1,23 @@
+body {
+    display: flex;
+
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 4vw;
+    color:#dfdfdf;
+}
+
+p{
+    color:rgb(238, 238, 238);
+}
+
+div.text{
+    width:40%;
+}
+

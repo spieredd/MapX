@@ -1,0 +1,11 @@
+body{
+	color:                    hsla(210, 100%, 100%, 0.88) !important;
+	outline:    0.25rem solid hsla(210, 100%, 100%, 0.50) !important;
+	background-color: linear-gradient(hsl(0, 25%, 19%), rgb(19, 19, 19) 6.55rem) !important;
+}
+
+.debug-center {
+	display:         flex;
+	justify-content: center;
+	align-items:     center;
+}
