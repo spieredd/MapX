@@ -8,11 +8,11 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
-app.set("trust proxy", true);
-app.use((req, res, next) => {
-  if (!req.secure) return res.redirect("https://" + req.get("host") + req.url);
-  next();
-});
+// app.set("trust proxy", true);
+// app.use((req, res, next) => {
+//   if (!req.secure) return res.redirect("https://" + req.get("host") + req.url);
+//   next();
+// });
 
 app.get("/", (req, res) => {
   res.render("index");
@@ -24,6 +24,10 @@ app.get("/map", (req, res) => {
 
 app.get("/images", (req, res) => {
   res.render("images");
+});
+
+app.get("/about", (req, res) => {
+  res.render("about");
 });
 
 app.listen(PORT, () => {
