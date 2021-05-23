@@ -1,15 +1,106 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    margin:0;
-    padding:0;
 }
 
-body{
-    font-family: sans-serif;
-    background-color:#413c69;
+body {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(255, 233, 233);
 }
 
-h1,a,span,p,li{
-    color:#f8a488; !important
-    opacity: 0.9;
+header.header {
+    padding: 2vh 10vw;
+}
+
+nav.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    padding-bottom: 1vh;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+nav.nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20vw;
+    list-style-type: none;
+}
+
+h1.title {
+    font-weight: 400;
+}
+
+nav.nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+
+main {
+    padding: 2vh 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main div.left {
+    padding: 12vh 0;
+    padding-right: 10vw;
+}
+
+h1.brandname{
+    margin-bottom: 5vh;
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+h2.presentationText {
+    font-weight: 400;
+    margin-bottom: 3vh;
+}
+
+.left a {
+    text-decoration: none;
+}
+
+div.buttonGroup {
+    margin-top: 5vh;
+}
+
+button.button {
+
+    padding: 1.5vh 2vw;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    border: 4px solid #000;
+    font-size: 1rem;
+    cursor: pointer;
+    color:#fff;
+}
+
+button.button1 {
+    background-color: brown;
+    border-color: rgb(125, 32, 32);
+    margin-right: 5px;
+}
+
+button.button2 {
+    background-color: grey;
+    border-color: rgb(63, 63, 63);
+}
+
+img.presentationImage {
+    width: 500px;
+    margin-top:5vh
 }
