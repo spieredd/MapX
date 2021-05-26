@@ -25,7 +25,8 @@ nav.nav {
     align-items: center;
     border: none;
     padding-bottom: 1vh;
-    border-bottom: 1px solid rgba(249, 249, 249, 0.6);
+    
+    : 1px solid rgba(249, 249, 249, 0.6);
 }
 
 nav.nav ul {
@@ -113,6 +114,14 @@ button.button2 {
 img.presentationImage {
     width: 500px;
     margin-top: 5vh;
+}
+
+button.button{
+    transition-duration: 20ms;
+}
+
+button.button:hover{
+    transform: scale(1.05)
 }
 
 @media screen and (max-width: 600px) {
