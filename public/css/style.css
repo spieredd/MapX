@@ -124,6 +124,7 @@ img.presentationImage {
     }
     h1.brandname {
         text-align: center;
+        font-weight:bold;
     }
     h1.title {
         text-align: center;
@@ -148,5 +149,9 @@ img.presentationImage {
     }
     header{
         display: none;
+    }
+    button.button{
+        font-size:1.3rem;
+        padding: 2vh 2vw;
     }
 }
