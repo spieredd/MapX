@@ -38,7 +38,7 @@ nav.nav ul {
 
 h1.title {
     font-weight: 600;
-    font-family: 'Nunito', sans-serif;    
+    font-family: 'Nunito', sans-serif;
     /* letter-spacing: -0.5px; */
 }
 
@@ -83,7 +83,7 @@ div.buttonGroup {
 button.button {
 
     padding: 1.5vh 2vw;
-    font-family: 'Nunito', sans-serif;    
+    font-family: 'Nunito', sans-serif;
     border-radius: 5px;
     /* border: 4px solid #000; */
     border: none;
@@ -103,10 +103,50 @@ button.button1 {
 button.button2 {
     background-color: rgb(208, 208, 208);
     border-color: rgb(63, 63, 63);
-    color:#000;
+    color: #000;
 }
 
 img.presentationImage {
     width: 500px;
     margin-top: 5vh;
+}
+
+@media screen and (max-width: 600px) {
+    main.main {
+        padding: 0vh 4vw;
+        display: flex;
+        margin:0;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    h2.presentationText {
+        text-align:center;
+    }
+    h1.brandname {
+        text-align: center;
+    }
+    h1.title {
+        text-align: center;
+    }
+    nav.nav ul{
+        display: none;
+    }
+    .buttonGroup{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    a .button1{
+        margin-right:20px;
+    }
+    img.presentationImage {
+        display:none;
+    }
+    nav.nav {
+        border:none;
+    }
+    header{
+        display: none;
+    }
 }
