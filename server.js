@@ -6,27 +6,34 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-app.use(express.static("public"));
 app.set("view engine", "ejs");
+app.use(express.json());
+app.use(express.urlencoded());
+app.use(express.static("./public"));
+
 
 app.get("/", (req, res) => {
-  res.redirect("/home");
+  res.redirect("/web/app/home");
 });
 
-app.get("/home", (req, res) => {
-  res.render("pages/home");
+app.get("/web/app/home", (req, res) => {
+  res.render("pages/home2");
 });
 
-app.get("/map", (req, res) => {
-  res.render("map");
+app.get("/web/app/resources/images", (req, res) => {
+  res.render("pages/images");
 });
 
-app.get("/images", (req, res) => {
-  res.render("images");
+app.get("/web/app/about", (req, res) => {
+  res.render("pages/about");
 });
 
-app.get("/about", (req, res) => {
-  res.render("about");
+app.get("/web/app/resources/local-case-study", (req, res) => {
+  res.render("pages/local")
+});
+
+app.get("/web/app/resources/personal-case-study", (req, res) => {
+  res.render("pages/personal")
 });
 
 app.listen(PORT, () => {
