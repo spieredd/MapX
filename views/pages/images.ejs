@@ -1,0 +1,164 @@
+<%- include('../partials/header.ejs') %>
+<style>
+    .photo-grid {
+        display: grid;
+        gap: 1rem;
+
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-auto-rows: 240px;
+    }
+
+    /* Medium screens */
+    @media screen and (min-width: 600px) {
+        .card-tall {
+            grid-row: span 2 / auto;
+        }
+
+        .card-wide {
+            grid-column: span 2 / auto;
+        }
+    }
+
+    h1 {
+        margin-left: 10px;
+    }
+
+
+    body {
+        color: #fff;
+        background: rgb(19, 19, 19);
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        background: #353535;
+        box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+        height: 100%;
+        width: 100%;
+        border-radius: 4px;
+        transition: all 500ms;
+        overflow: hidden;
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        cursor: pointer;
+    }
+
+    .card div {
+        font-size: 1rem;
+        color: #fff;
+        background-color: black;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        opacity: 0.8;
+        border-radius: 4px;
+    }
+
+    .card:hover {
+        box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+        transform: translateY(-3px) scale(1.05);
+    }
+</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">WW1 OIB°3 Map Project</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/web/app/about">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/web/app/resources/images">Images</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/web/app/resources/local-case-study">Local Case Study</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/web/app/resources/personal-case-study">Personal Case
+                                    Study</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">Contact</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    Ecole Jeannine Manuel - 2021
+                </span>
+            </div>
+        </div>
+    </nav>
+    <main style="padding:0 5vw 5vh 5vw">
+        <div style="padding:10vh 10vw 5vh 10vw">
+            <h2>Image Bank</h2>
+            <hr>
+        </div>
+
+        <div class="photo-grid">
+            <div class="card card-tall card-wide"
+                style="background-image:url('https://cdn.theatlantic.com/media/img/photo/2016/11/world-war-i-in-photos-the-western-f-1/w_01/main_1500.jpg')">
+            </div>
+            <div class="card card-tall"
+                style="background-image:url('https://cdn.prod.www.spiegel.de/images/bace8556-0001-0004-0000-000000144020_w996_r1.77_fpx50_fpy52.41.jpg')">
+            </div>
+            <div class="card"
+                style="background-image:url('https://www.history.com/.image/t_share/MTU3ODc4NjA0MDU2MzcyNTUz/image-placeholder-title.jpg')">
+            </div>
+            <div class="card"
+                style="background-image:url('https://www.wearethemighty.com/app/uploads/legacy/assets.rbl.ms/22674395/origin.jpg')">
+            </div>
+            <div class="card"
+                style="background-image:url('https://qph.fs.quoracdn.net/main-qimg-93ccd7bc40ae47faae0f1ede3714dca6.webp')">
+            </div>
+            <div class="card"
+                style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/d/db/British_Mark_V-star_Tank.jpg')">
+            </div>
+            <div class="card card-wide" style="background-image:url('https://spartacus-educational.com/00gas1.jpg')">
+            </div>
+            <div class="card"
+                style="background-image:url('https://media.wired.com/photos/593248c0edfced5820d0f615/master/w_2560%2Cc_limit/HMS_Dreadnought-inline1.jpg')">
+            </div>
+            <div class="card"
+                style="background-image:url('https://www.worldwar1centennial.org/images/ww1edu/2017/07/HEADER_InTheTrenches.jpg')">
+            </div>
+            <div class="card"
+                style="background-image:url('https://i.pinimg.com/originals/24/15/f6/2415f6d11bdf8bca86c39f59bc792f4a.jpg')">
+            </div>
+            <div class="card"
+                style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/2/20/El_114_de_infanter%C3%ADa%2C_en_Par%C3%ADs%2C_el_14_de_julio_de_1917%2C_Le%C3%B3n_Gimpel.jpg')">
+            </div>
+            <div class="card"
+                style="background-image:url('https://i.pinimg.com/236x/68/a7/03/68a70348f7a61fba4d434ea411ea8ab6----vintage-photos.jpg')">
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
