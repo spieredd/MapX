@@ -6,10 +6,10 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-app.set("view engine", "ejs");
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 app.use('/web/app', express.static('public'));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.set("view engine", "ejs");
 
 
 app.get("/", (req, res) => {
@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/web/app/home", (req, res) => {
-  res.render("pages/home2");
+  res.render("pages/home");
 });
 
 app.get("/web/app/resources/images", (req, res) => {
@@ -33,15 +33,15 @@ app.get("/web/app/contact", (req, res) => {
 });
 
 app.get("/web/app/resources/local-case-study", (req, res) => {
-  res.render("pages/local")
+  res.render("pages/local");
 });
 
 app.get("/web/app/resources/personal-case-study", (req, res) => {
-  res.render("pages/personal")
+  res.render("pages/personal");
 });
 
 app.post('/web/app/contact/review', (req, res) => {
-  console.log(req.body.review);
+  console.log(req);
   res.render('pages/contact.ejs', { ok: true });
 })
 
