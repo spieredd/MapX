@@ -64,11 +64,16 @@ app.post("/web/app/contact", (req, res) => {
     username = req.body.username;
   }
 
+  let mailList = [
+    process.env.MAIL,
+    process.env.MAILB
+  ]
+
   let mailOptions = {
     from: process.env.MAIL,
-    to: process.env.MAIL,professor,
+    to: mailList,
     subject: `WW1 Map Project - Automatic Review Email`,
-    html: `<div style="border-radius:5px;padding:20px;background-color:#f9dfdc;font-size:1.2rem;"><p style="color:#962d2d">This is an automatic email sent when a person leaves a review on our WW1 Class Project Website: </p><hr><p style="font-weight:bold">Person who has sent this message: <span style="font-style: italic;">${username}</span></p><hr><p>Content of the message:</p><p style="background-color:#f6b8b8; padding:10px">"${req.body.review}"</p><hr><p>Cordially,</p><p>Adrien DUMONT.</p></div>`,
+    html: `<p>Automatic Email sent from the server behind our Class Map Project<p>This is a review that a user has sent on the website through the contact page:</p><hr><p><span style="font-weight:bold">Sender:</span> ${username}</p><hr><p style="font-weight:bold">Review content:</p><p style="font-style:italic">${req.body.review}</p>`,
   };
 
   transporter.sendMail(mailOptions, function (error, info) {
