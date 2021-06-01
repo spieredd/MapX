@@ -66,6 +66,23 @@
         box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
         transform: translateY(-3px) scale(1.05);
     }
+
+    main {
+        padding: 0 5vw 5vh 5vw;
+    }
+
+    main div.imagediv {
+        padding: 10vh 10vw 5vh 10vw;
+    }
+
+    @media screen and (max-width: 600px) {
+        main {
+            padding: 5vh 5vw
+        }
+        main div.imagediv{
+            padding:0;
+        }
+    }
 </style>
 </head>
 
@@ -115,8 +132,8 @@
             </div>
         </div>
     </nav>
-    <main style="padding:0 5vw 5vh 5vw">
-        <div style="padding:10vh 10vw 5vh 10vw">
+    <main>
+        <div class="imagediv">
             <h2>Image Bank</h2>
             <hr>
         </div>

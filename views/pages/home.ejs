@@ -3,7 +3,7 @@
 
 <body>
     <%- include('../partials/navbar.ejs') %>
-    <main style="width:100%;padding:10vh 15vw">
+    <main>
         <div class="card" style="border-radius:5px">
             <div id="carouselExampleIndicators" class="card-img-top carousel slide" data-bs-ride="carousel" style="border-top-left-radius:10px;border-top-right-radius:10px;">
                 <div class="carousel-indicators">
@@ -47,7 +47,7 @@
             </div>
         </div>
         <div class="row" style="padding:2vh 0;">
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Local Case Study</h5>
@@ -60,10 +60,22 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <div class="card" style="height:100%;">
-                    <div class="card-body"
-                        style="display:flex;flex-direction:column;justify-content:space-between; align-items:flex-start;">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Local Case Study</h5>
+                        <hr>
+                        <p class="card-text">In order to carry out this project, each of us chose a town in
+                            Hauts-de-France to then carry out a local case study on it.</p>
+                        <p class="text-muted">These local case studies are also accessible by scanning the nfc located
+                            behind certain city names.</p>
+                        <a href="/web/app/resources/local-case-study" class="btn btn-primary">Local Case Study</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" id="cardspecial">
+                    <div class="card-body" id="cardspecialbody">
                         <div>
                             <h5 class="card-title">Personal case Study</h5>
                             <hr>
@@ -76,11 +88,24 @@
             </div>
         </div>
         <hr>
-        <div class="card">
-            <video class="card-img-top" style="width:100%" controls src="./assets/trailer.mp4"></video>
-
-            <div class="card-body text-center" style="padding:1vh 5vw;">
-                <p class="card-text text-center">Video produced by Caio Artus as part of our project.</p>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <video class="card-img-top" style="width:100%" controls src="./assets/trailer.mp4"></video>
+        
+                    <div class="card-body text-center" style="padding:1vh 5vw;">
+                        <p class="card-text text-center">Video produced by Caio Artus as part of our project.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <video class="card-img-top" style="width:100%" controls src="./assets/trailer.mp4"></video>
+        
+                    <div class="card-body text-center" style="padding:1vh 5vw;">
+                        <p class="card-text text-center">Video produced by Caio Artus as part of our project.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
