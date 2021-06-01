@@ -1,4 +1,14 @@
 <%- include('../partials/header.ejs') %>
+<style>
+    @media only screen and (max-width: 600px) {
+        .local{
+            margin-top:2vh;
+        }
+        .video{
+            margin-top:2vh;
+        }
+    }
+</style>
 </head>
 
 <body>
@@ -64,7 +74,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 local">
                 <div class="card" id="cardspecial">
                     <div class="card-body" id="cardspecialbody">
                         <div>
@@ -88,13 +98,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 video">
                 <div class="card">
                     <div class="card-body" id="cardspecialbody">
                         <div>
                             <h5 class="card-title">Trailer</h5>
                             <hr>
-                            <p class="card-text">Here is the trailer of our map created by our sound engineer, Caio Artus.</p>
+                            <p class="card-text">Here is the trailer of our map created by our sound engineer, Caio
+                                Artus.</p>
                         </div>
                         <hr>
                         <a href="/web/app/about#sound-engineer" class="btn btn-outline-dark">Learn More</a>
@@ -109,19 +120,20 @@
                             <div>
                                 <h5 class="card-title">Creative Team</h5>
                                 <hr>
-                                <p class="card-text">In this short accelerated video you can see our creative and artisitc team at work.</p>
+                                <p class="card-text">In this short accelerated video you can see our creative and
+                                    artisitc team at work.</p>
                             </div>
                             <hr>
                             <a href="/web/app/about#art" class="btn btn-outline-dark">Learn More</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-8">
+                <div class="col-sm-8 video">
                     <div class="card">
                         <video class="card-img-top" style="width:100%" controls src="./assets/artistic.mp4"></video>
 
                         <div class="card-body text-center" style="padding:1vh 5vw;">
-                            
+
                         </div>
                     </div>
                 </div>
