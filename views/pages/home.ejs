@@ -4,8 +4,39 @@
 <body>
     <%- include('../partials/navbar.ejs') %>
     <main style="width:100%;padding:10vh 15vw">
-        <div class="card">
-            <img class="card-img-top" style="height:40vh;object-fit: cover;" src="students.jpeg">
+        <div class="card" style="border-radius:5px">
+            <div id="carouselExampleIndicators" class="card-img-top carousel slide" data-bs-ride="carousel" style="border-top-left-radius:10px;border-top-right-radius:10px;">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner bg-dark" style="border-top-left-radius:10px;border-top-right-radius:5px;">
+                    <div class="carousel-item active">
+                        <img alt="students working on the project" src="students.jpeg" style="border-top-left-radius:5px;border-top-right-radius:5px;width:100%;height:40vh;object-fit:cover;object-position:50% 50%;">
+                    </div>
+                    <div class="carousel-item">
+                        <img alt="students working on the project" src="student2.jpeg" style="border-top-left-radius:5px;border-top-right-radius:5px;width:100%;height:40vh;object-fit:cover;object-position:50% 50%;">
+                    </div>
+                    <div class="carousel-item">
+                        <img alt="students working on the project" src="image3.jpeg" style="border-top-left-radius:5px;border-top-right-radius:5px;width:100%;height:40vh;object-fit:cover;object-position:50% 50%;">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon dark" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon dark" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <!-- <img class="card-img-top" style="height:40vh;object-fit: cover;" src="students.jpeg"> -->
             <div class="card-body" style="padding:3vh 5vw;">
                 <h4 class="card-title">Our Project</h4>
                 <hr>
