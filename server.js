@@ -56,12 +56,19 @@ app.post("/web/app/contact", (req, res) => {
   });
 
   let professor = process.env.MAIL2
+  let username = "";
+
+  if (!req.body.username) {
+    username = "anonymous";
+  } else {
+    username = req.body.username;
+  }
 
   let mailOptions = {
     from: process.env.MAIL,
     to: process.env.MAIL,professor,
     subject: `WW1 Map Project - Automatic Review Email`,
-    html: `<div style="border-radius:5px;padding:20px;background-color:#4a1c40;color:#fff"><p style="color:#962d2d">This is an automatic email sent when a person leaves a review on our WW1 Class Project Website: </p> <h3>person (can be anonymous):${req.body.username}</h3><h2>Content of the message</h2><p>${req.body.review}</p><h3>Cordially,</h3><h3>Adrien DUMONT.</h3></div>`,
+    html: `<div style="border-radius:5px;padding:20px;background-color:#f9dfdc;font-size:1.2rem;"><p style="color:#962d2d">This is an automatic email sent when a person leaves a review on our WW1 Class Project Website: </p><hr><p style="font-weight:bold">Person who has sent this message: <span style="font-style: italic;">${username}</span></p><hr><p>Content of the message:</p><p style="background-color:#f6b8b8; padding:10px">"${req.body.review}"</p><hr><p>Cordially,</p><p>Adrien DUMONT.</p></div>`,
   };
 
   transporter.sendMail(mailOptions, function (error, info) {
