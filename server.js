@@ -16,6 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use("/web/app", express.static("public"));
 
+
 app.get("/", (req, res) => {
   res.redirect("/web/app/home");
 });
@@ -24,7 +25,7 @@ app.get("/web/app/home", (req, res) => {
   res.render("pages/home");
 });
 
-app.get("/web/app/resources/images", (req, res) => {
+app.get("/web/app/images", (req, res) => {
   res.render("pages/images");
 });
 
