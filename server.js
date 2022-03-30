@@ -70,6 +70,8 @@ app.post("/web/app/contact", (req, res) => {
     process.env.MAILB
   ]
 
+  console.log('test')
+
   let mailOptions = {
     from: process.env.MAIL,
     to: mailList,
